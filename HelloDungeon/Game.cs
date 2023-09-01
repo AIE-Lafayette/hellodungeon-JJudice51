@@ -95,22 +95,38 @@ namespace HelloDungeon
                 //display options
                 Console.WriteLine("1. " + option1);
                 Console.WriteLine("2. " + option2);
-                Console.WriteLine("3. " + option3);
-                Console.WriteLine("4. " + option4);
 
-               //get player input
+                if (option3 != "")
+                {
+                    Console.WriteLine("3. " + option3);
+                }
+                if (option4 != "")
+                {
+                    Console.WriteLine("4. " + option4);
+                }
+                //get player input
                 Console.Write("> ");
                 playerChoice = Console.ReadLine();
 
-                if (playerChoice != "1" && playerChoice != "2" && playerChoice != "3" && playerChoice != "4")
+                if (playerChoice != "1" && playerChoice != "2")
                 {
-                    // error message if statement
+                    // if player input is no one of the available options
+                    if (playerChoice == "3" && playerChoice != "")
+                    {
+                        continue;
+                    }
+                    if (playerChoice == "4" && playerChoice != "")
+                    {
+                        continue;
+                    }
+                    // error message if statement, making playerChoice and empty string again makes the loop return to the top.
                     Console.Clear();
                     Console.WriteLine("Idk what you want from me, but that wasn't right...");
                     Console.WriteLine("Press anything to try again please");
                     Console.ReadKey(true);
+                    playerChoice = "";
                 }
-            
+
 
             }
 
@@ -126,7 +142,7 @@ namespace HelloDungeon
 
             {
                 {
-                        
+
                     //Learning about variables, initialize player stats ;
                     string playerName = "";
                     uint playerHealth = 100;
@@ -194,7 +210,7 @@ namespace HelloDungeon
                     string quarterstaff;
                     string bigSword;
                     string bunchOfKnives;
-                       
+
 
                     //Here is where I'll Put initial Weapon Stats
 
@@ -272,31 +288,44 @@ namespace HelloDungeon
                         Console.WriteLine("2. No");
 
 
-                        //playerChoice = Console.ReadLine();
+                        playerChoice = Console.ReadLine();
 
 
-                        //playerChoice = " ";
-                        //while (playerChoice != "1" && playerChoice != "2")
-                        //{
-                        //    Console.WriteLine("1. Yes");
-                        //    Console.WriteLine("2. No");
-                        //    Console.WriteLine(">");
-                        //    playerChoice = Console.ReadLine();
+                        playerChoice = " ";
+                        while (playerChoice != "1" && playerChoice != "2")
+                        {
+                            Console.WriteLine("1. yes");
+                            Console.WriteLine("2. no");
+                            Console.WriteLine(">");
+                            playerChoice = Console.ReadLine();
 
+                            //Basically setting up game over loop would you like to continue etc. don't fully get how this while loop works
 
-                        //    if (playerChoice == "2")
-                        //    {
-                        //        //gameOver = true;
-                        //    }
-                        //    else if (playerChoice != "1")
-                        //    {
-                        //        Console.WriteLine("Invalid Input");
-                        //    }
+                            if (playerChoice == "2")
+                            {
+                                //gameOver = true;
+                            }
+                            else if (playerChoice != "1")
+                            {
+                                Console.WriteLine("invalid input");
+                            }
                         }
                     }
 
                 }
             }
-        }// \n THIS MEANS YOU CAN SKIP A FUCKING LINE IN DIALOGUE HOLY SHIT THATS SO MUCH EASIER!!!!~~!~!~!@!~@$!@##%@!%`23VB HH BH
+        }
     }
-
+}              
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // \n THIS MEANS YOU CAN SKIP A FUCKING LINE IN DIALOGUE HOLY SHIT THATS SO MUCH EASIER!!!!~~!~!~!@!~@$!@##%@!%`23VB HH BH
