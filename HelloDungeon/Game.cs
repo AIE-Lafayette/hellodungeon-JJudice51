@@ -9,13 +9,13 @@ namespace HelloDungeon
 {
     class Game
     {
-        //Learning about variables and how to utilizer scope better. putting this at the top before class Game...
+        //Learning about variables and how to utilize scope better. putting this at the top before class Game...
         //makes it to where these variables are in scope for the rest of my game, initialize player stats and starting variables here;
         string playerName = "";
         string playerClass = "";
         uint playerHealth = 10;
         int currentScene = 0;
-        float playerDamage = 0;
+        float playerDamage = 0.0f;
         string playerChoice = "";
         bool playerIsAlive = true;
         string enemyName = "";
@@ -322,7 +322,6 @@ namespace HelloDungeon
         }
 
         public void Run()
-
         {
 
             //loop to run any scene in game;
@@ -383,4 +382,4 @@ namespace HelloDungeon
         
         // ctrl, m, o, = collapse all functions
         // ctrl, m, p, = expand all functions
-        // \n THIS MEANS YOU CAN SKIP A FUCKING LINE IN DIALOGUE HOLY SHIT THATS SO MUCH EASIER!!!!~~!~!~!@!~@$!@##%@!%`23VB HH BH
+        // \n THIS MEANS YOU CAN SKIP A LINE IN DIALOGUE 
